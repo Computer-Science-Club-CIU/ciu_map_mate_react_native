@@ -14,11 +14,11 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { Screen } from "../components";
 
-export default function WelcomeScreen() {
+export default function CongratsScreen() {
   const navigation = useNavigation();
   return (
     <Screen style={styles.container}>
-      <View style={{ marginVertical: 8 }}>
+      <View style={{ marginVertical: 100 }}>
         <Text
           style={{
             fontSize: wp(10),
@@ -27,49 +27,41 @@ export default function WelcomeScreen() {
             color: "#000",
           }}
         >
-          CIU MAPMATE
+          YAY!!!
         </Text>
         <Text
           style={{
             fontSize: wp(3.5),
             textAlign: "center",
             letterSpacing: 1,
-            fontWeight: 800,
+
             color: "#000",
           }}
         >
-          Welcome!
+          Congratulations! You have arrived your location. Leave a review to
+          help us be better.
         </Text>
       </View>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "center",
-        }}
-      >
-        <Image
-          source={require("../../assets/ciu.png")}
-          style={{ width: wp(75), height: wp(75) }}
-        />
-      </View>
+
       <TouchableOpacity
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate("Welcome")}
         style={{
-          backgroundColor: "#801818",
+          backgroundColor: "#000",
           marginHorizontal: 5,
           padding: 16,
           borderRadius: 16,
+          marginTop: 360,
         }}
       >
         <Text
           style={{
-            fontSize: wp(6),
-            fontWeight: "bold",
+            fontSize: wp(5),
+
             textAlign: "center",
             color: "white",
           }}
         >
-          GET START
+          Back to Home Dcreen
         </Text>
       </TouchableOpacity>
     </Screen>
@@ -79,7 +71,7 @@ const styles = StyleSheet.create({
   container: {
     display: "flex",
     flex: 1,
-    justifyContent: "space-around",
     backgroundColor: "#fff",
+    padding: 15,
   },
 });
